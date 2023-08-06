@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}User Manager{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <a href="{{path('app_user_manager_add')}}" class='btn btn-primary'>Add</a>
+        <a href="{{path('app_logout')}}" class='btn btn-danger'>Logout</a>
+        <table class="table">
+            <thead>
+                <tr>
+                    <td>STT</td>
+                    <td>Username</td>
+                    <td>Fullname</td>
+                    <td>Hành động</td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for u in data %}
+                    <tr>
+                        <td>{{loop.index}}</td>
+                        <td>{{u.getUsername()}}</td>
+                        <td>{{u.getFirstName()}} {{u.getLastName()}}</td>
+                        <td>
+                            <a href="{{path('app_edit_user',{'id' :u.getId()})}}" class="btn btn-warning">Edit</a>
+                            <a href="javascript:deletesp('{{path('app_delete_user',{'id' :u.getId()})}}')" class="btn btn-danger">Delete</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
+{% block javascripts %}
+    <script>
+        function deletesp(url){
+            if(confirm("Do you delete product?")){
+                window.location.href = url;
+            }
+        }
+    </script>
+
+{% endblock %}

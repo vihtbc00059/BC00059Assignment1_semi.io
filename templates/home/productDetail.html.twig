@@ -1,0 +1,317 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+
+<link rel="stylesheet" href="/css/sanpham.css">
+
+
+<header>
+    <h2 class="Logo">TvStore</h2>
+
+     <div class="menu">
+        <li><a href"">Female</a>
+            <ul class="sub-menu">
+                <li><a href="{{path('app_home_product')}}">New products</a></li>
+                <li><a href="">Áo</a></li>
+                    <ul>
+                        <li><a href="">Áo sơ mi</a></li>
+                        <li><a href="">Áo Thun</a></li>
+                        <li><a href="">Áo Vest</a></li>
+                        <li><a href="">Áo Khoác</a></li>
+                        <li><a href="">Áo Len</a></li>              
+                    </ul>
+                </li>
+                <li><a href="">Quần</a>
+                    <ul>
+                        <li><a href="">Quần Jean</a></li>              
+                        <li><a href="">Quan Lửng</a></li>              
+                        <li><a href="">quần dài</a></li>              
+
+                    </ul>
+            </ul>
+        
+        </li>
+        <li><a href"">Male</a>
+        <ul class="sub-menu">
+                <li><a href="{{path('app_home_product')}}">hàng mới về</a></li>
+                <li><a href="">Áo</a></li>
+                    <ul>
+                        <li><a href="">Áo sơ mi</a></li>
+                        <li><a href="">Áo Thun</a></li>
+                        <li><a href="">Áo Vest</a></li>
+                               
+                    </ul>
+                </li>
+                <li><a href="">Quần</a>
+                    <ul>
+                        <li><a href="">Quần Jean</a></li>              
+                        <li><a href="">Quần Dài</a></li>                          
+
+                    </ul>
+            </ul>
+        </li>
+        <li><a href"">Children</a>
+        </li>
+        {# <li><a href"">Abous Us</a></li>         #}
+    </div>
+    <div class="order">
+        <li><input placeholder="Search" type="text"><i class="fa fa-search"></i></li>
+        <li><a class="fa fa-user-search" href="">Login</a></li>
+        <li><a class="fa fa-shopping-cart" href="">Cart</a></li>
+        <li><a class="fa fa-faw"></a></li>
+       
+    </div>
+</header>
+{# detail product #}
+<section class="product">
+    <div class="container">
+        <div class="product-top row"> 
+            <p><p>Home</p> <span>&#10230;</span> <p>Female</p> <span>&#10230;</span> <p>New products</p><span>&#10230;</span> <p>Pijama</p></p>  
+        </div> 
+        <div class="product-content row">
+            <div class=" row product-content-left">
+                <div class="product-content-left-big-img">
+                    <img src="/img/main1.4.webp" alt="">
+                </div>
+                <div class="product-content-left-small-img">
+                    <img src="/img/main1.2.webp" alt="">
+                    <img src="/img/main1.3.webp" alt="">
+                    <img src="/img/main1.webp" alt="">
+                </div>
+            </div>
+            
+            <div class="product-content-right">
+                <div class="product-content-right-product-name">
+                    <h1>Váy ngủ 2 dây trễ vai cực ngắn ôm body sexy quyến rũ</h1>
+                    <p>MSP: SMS311</p>
+                </div>
+                <div class="product-content-right-product-price">
+                    <p>150.000<sup>đ</sup></p>
+                </div>
+                <div class="product-content-right-product-color">
+                    <p><span style="font-weight: bold">Color</span>:Black</p><span style="color: black;"></span>
+                </div>
+            
+                 <div class="product-content-right-product-size">
+                    <p style="font-weight: bold">Size</p>
+                <div class="size">
+                    <span>S</span>                
+                    <span>M</span>                
+                    <span>L</span>                
+                    <span>XL</span>                
+                    <span>XXL</span>                
+                </div>
+                 </div>
+                <div class="quantity">
+                     <p  style="font-weight: bold">Quantity</p>
+                    <input type="number" min="0" value="1"> <br>    
+                </div>
+                <p style="color: red">Please select Size</p>
+            <div class="product-content-right-product-button">
+            <button><i class='bx bx-cart'></i><p>Add to Cart</p></button>
+            <button><p>Find it at the store</p></button>
+            </div>  
+            <div class="product-content-right-product-icon">
+            <div class="product-content-right-product-icon-item"
+                    <i class='bx bx-phone'></i><p>HotLine</p>
+            </div>
+            <div class="product-content-right-product-icon-item"
+                    <i class='bx bx-chat' ></i><p>Chat</p>
+            </div>
+            <div class="product-content-right-product-icon-item"
+                   <i class='bx bxl-gmail'></i><p>Mail</p>
+            </div>
+        </div>
+        <div class="product-content-right-product-QR">
+            <img src="/img/QR.jpg" alt="">
+        </div>
+         <div class="product-content-right-bottom">
+            <div class="product-content-right-bottom-top">
+                &#8744;
+            </div>
+             <div class="product-content-right-bottom-content-big">
+                <div class="product-content-right-bottom-content-title row">
+                <div class="product-content-right-bottom-content-title-item chitiet">
+                    <p>Chi tiet</p>
+                </div>
+                <div class="product-content-right-bottom-content-title-item baoquan">
+                    <p>Preserve</p>
+                </div>
+                <div class="product-content-right-bottom-content-title-item">
+                    <p>tham khao size</p>
+                </div>
+                </div>
+                <div class="product-content-right-bottom-content-chitiet">
+.Bộ sản phẩm : váy 2 dây trễ vai<br><br>
+.Phụ kiện kèm theo : không có<br><br>
+.Chất liệu : vải thun<br><br>
+.Màu chính : đen, xám<br><br>
+.Hoạ tiết : trơn<br><br>
+.Cách thiết kế : 2 dây, trễ vai<br><br>
+.Điểm nhấn : lỗ ở trước ngực<br><br>
+.Style : nữ hoàng, sexy gợi cảm, khiêu gợi, hư nhưng đẹp, quyến rũ chồng<br><br>
+.Dành cho : các người đẹp, nữ nhân, đàn bà<br><br>
+.Kích thước : S/M/L/XL/Free Size<br><br>
+.Cân nặng : 70kg<br><br>
+.Độ dài : ngắn ngang đùi<br><br>
+.Độ dày : bình thường<br><br>
+.Kiểu mặc : chui đầu<br><br>
+                </div>
+                <div class="product-content-right-bottom-content-baoquan">
+                .Sử dụng : ở nhà, ra đường, đi chơi, ngày lễ, sự kiện<br><br>
+                .Mùa áp dụng : 4 mùa xuân hạ thu đông<br><br>
+                .Nơi sản xuất : từ Quảng Châu<br><br>
+                .Danh mục : váy ngủ 2 dây<br><br>
+                </div>
+             </div>
+             </div>
+         </div>
+     </div>
+</div>
+</div>
+</section>
+{# product-relatted #}
+<section class="product-relatted">
+    <div class="product-relatted-title">
+        <P>Sản Pham liên quan</P>
+    </div>
+    <div class="product-content row">
+        <div class="product-related-item">
+            <img src="/img/main2.webp" alt="">
+            <h1>Ultra-short 2-shoulder sexy body</h1>
+            <p>210.000<sub>đ</sub></p>
+        </div>
+        <div class="product-related-item">
+            <img src="/img/main4.webp" alt="">
+            <h1>Ultra-short 2-shoulder sexy body</h1>
+            <p>210.000<sub>đ</sub></p>
+        </div>
+        <div class="product-related-item">
+            <img src="/img/main5.webp" alt="">
+            <h1>Ultra-short 2-shoulder sexy body</h1>
+            <p>210.000<sub>đ</sub></p>
+        </div>
+        <div class="product-related-item">
+            <img src="/img/main6.webp" alt="">
+            <h1>Ultra-short 2-shoulder sexy body</h1>
+            <p>210.000<sub>đ</sub></p>
+        </div>
+        <div class="product-related-item">
+            <img src="/img/main7.webp" alt="">
+            <h1>Ultra-short 2-shoulder sexy body</h1>
+            <p>210.000<sub>đ</sub></p>
+        </div>
+
+     </div>
+   
+</section>
+
+
+
+
+
+
+
+{# app #}
+<section class="app-container">
+    <p>Download the app TvStore</p>
+    <div class="app-google">
+        <img src="/img/appStore.png">
+        <img src="/img/google.png">
+    </div>
+    <p>Receive TvStore Newsletter</p>
+    <input type="Text" placeholder="Enter your email...">
+</section>
+{# footer #}
+<div class="footer-top" >
+    <li><a href="">Contact</a></li>
+    <li><a href="">Introduce</a></li>
+    <li><a href="">Recruitment</a></li>
+        </div>
+    <div class="footer-center">
+    <p>Address: 41 Cach Mang Thang 8 Street, An Hoa, Ninh Kieu, Can Tho - 0546 465 9675 <br>
+    Order online : <b> 0343 658 5837</b>
+    </p>
+    </div>
+    <div class="footer-bottom">
+    @TvStore all right reserved
+    </div>
+
+<script>
+    const header = document.querySelector("header")
+    window.addEventListener("scroll", function(){
+        x = window.pageYOffset
+        if(x>0){
+            header.classList.add("sticky")
+        }
+        else{
+            header.classList.remove("sticky")
+        }
+    })
+
+
+
+    const imgPosition = document.querySelectorAll('.aspect-ratio-169 img')
+    const imgContainer = document.querySelector('.aspect-ratio-169')
+    const dotItem = document.querySelectorAll('.dot')
+    let imgNuber = imgPosition.length
+    let index = 0
+
+imgPosition.forEach(function(image,index){
+        image.style.left = index*100 + "%"
+        dotItem[index].addEventListener("click", function(){
+            slider(index) 
+        })
+    })
+    function imgSlide(){
+    index++;
+    console.log(index)
+    if (index>=imgNuber) {index=0}
+    slider(index)
+    }
+    function slider(index){
+       imgContainer.style.left = "-"+ index*100+ "%" 
+       const dotActive = document.querySelector('.active')
+       dotActive.classList.remove("active")
+       dotItem[index].classList.add("active")
+       
+    }
+    setInterval(imgSlide,5000)
+</script>
+
+<script>
+    const bigImg = document.querySelector(".product-content-left-big-img img")
+    const smalImg = document.querySelectorAll(".product-content-left-small-img img")
+    smalImg.forEach(function(imgItem,X){
+        imgItem.addEventListener("click",function(){
+        imgItem.src = imgItem.src
+        })  
+    })
+
+
+    const baoquan = document.querySelector(".baoquan")
+    const chitiet = document.querySelector(".chitiet")
+    if(baoquan){
+        baoquan.addEventListener(".click", function(){
+            document.querySelector(".product-content-right-bottom-content-chitiet").style.display = "block"
+            document.querySelector(".product-content-right-bottom-content-baoquan").style.display = "none"
+
+        })
+    }
+    if(chitiet){
+        chitiet.addEventListener(".click", function(){
+            document.querySelector(".product-content-right-bottom-content-chitiet").style.display = "none"
+            document.querySelector(".product-content-right-bottom-content-baoquan").style.display = "block"
+
+        })
+    }
+    const butTon = document.querySelector(".product-content-right-bottom-top")
+    if(butTon){
+        butTon.addEventListener("click", function(){
+            document.querySelector(".product-content-right-bottom-content-big").classList.toggle("activeB")
+        })
+    }
+</script>
+{% endblock %}

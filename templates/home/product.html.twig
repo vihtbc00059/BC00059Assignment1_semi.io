@@ -1,0 +1,258 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+
+<link rel="stylesheet" href="/css/sanpham.css">
+
+
+    <header>
+    <h2 class="Logo">TvStore</h2>
+
+     <div class="menu">
+        <li><a href"">Female</a>
+            <ul class="sub-menu">
+                <li><a href="{{path('app_home_product')}}">hàng mới về</a></li>
+                <li><a href="">Áo</a></li>
+                    <ul>
+                        <li><a href="">Áo sơ mi</a></li>
+                        <li><a href="">Áo Thun</a></li>
+                        <li><a href="">Áo Vest</a></li>
+                        <li><a href="">Áo Khoác</a></li>
+                        <li><a href="">Áo Len</a></li>              
+                    </ul>
+                </li>
+                <li><a href="">Quần</a>
+                    <ul>
+                        <li><a href="">Quần Jean</a></li>              
+                        <li><a href="">Áo Lửng</a></li>              
+                        <li><a href="">Áo dài</a></li>              
+
+                    </ul>
+            </ul>
+        
+        </li>
+        <li><a href"">Male</a>
+        <ul class="sub-menu">
+                <li><a href="{{path('app_home_product')}}">hàng mới về</a></li>
+                <li><a href="">Áo</a></li>
+                    <ul>
+                        <li><a href="">Áo sơ mi</a></li>
+                        <li><a href="">Áo Thun</a></li>
+                        <li><a href="">Áo Vest</a></li>
+                               
+                    </ul>
+                </li>
+                <li><a href="">Quần</a>
+                    <ul>
+                        <li><a href="">Quần Jean</a></li>              
+                        <li><a href="">Quần Dài</a></li>                          
+
+                    </ul>
+            </ul>
+        </li>
+        <li><a href"">Chill</a>
+        </li>
+        <li><a href"">Abous Us</a></li>        
+    </div>
+    <div class="order">
+        <li><input placeholder="Search" type="text"><i class="fa fa-search"></i></li>
+        <li><a class="fa fa-user-search" href="">Login</a></li>
+        <li><a class="fa fa-shopping-cart" href="">Cart</a></li>
+        <li><a class="fa fa-faw"></a></li>
+       
+    </div>
+</header>
+{# category #}
+<section class="cartegory">
+    <div class="container">
+        <div class="cartegory-top row">
+            <p>Home</p> <span>&#10230;</span> <p>Female</p> <span>&#10230;</span> <p>New products</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="cartegory-left">
+                <ul>
+                    <li class="cartegory-left-li"><a href="#">Female</a>
+                     <ul>
+                        <li><a href="">Shirt</a></li>
+                        <li><a href="">T-shirt</a></li>
+                        <li><a href="">Vest</a></li>
+                        <li><a href="">Jacket</a></li>
+                        <li><a href="">Sweater</a></li>      
+                        <li><a href="">Jean</a></li>              
+                        <li><a href="">Sweater</a></li>              
+                        <li><a href="">Trouser</a></li>        
+                    </ul>
+                 </li>
+                 
+                    <li class="cartegory-left-li"><a href="#">Male</a>
+                        <ul>
+                        <li><a href="">Shirt</a></li>
+                        <li><a href="">T-shirt</a></li>
+                        <li><a href="">Vest</a></li>
+                        <li><a href="">Jean</a></li>              
+                        <li><a href="">Trouser</a></li>                          
+
+                               
+                    </ul>
+                    </li>
+                    
+                    
+                    <li class="cartegory-left-li"><a href="">Children</a></li>
+                </ul>
+
+            </div>
+             <div class="cartegory-right row">
+                <div class="cartegory-right-top-item">
+                        <p>New arrivals women's goods</p>
+                    {# <button><span>Bo loc</span> <i class="fas fa-sort-down "></i></button> #}
+                </div>
+                <div class="cartegory-right-top-item">
+                    <select name="" id="">
+                        <option value="">Arrange </option>
+                        <option value="">Price high to low</option>
+                        <option value="">Low to high price</option>
+                    </select>
+                </div>
+                        
+            
+                                                                    
+                <div class="cartegory-right-content row">
+                 <div class="cartegory-right-content-item">
+                        <img src="/img/main1.webp" alt="">
+                     <h1><a href="{{path('app_home_product_detail')}}">Ultra-short 2-piece off-shoulder nightgown hugging sexy body</a></h1>
+                                                                    <p>210.000<sup>Đ</sup></p>
+                                                                    </div>
+                                                                <div class="cartegory-right-content-item">
+                                                                    <img src="/img/main2.webp" alt="">
+                                                                    <h1>Sexy short sleeveless low-cut nightgown design black</h1>
+                                                                    <p>210.000<sup>Đ</sup></p>
+                                                                </div>
+                                                                <div class="cartegory-right-content-item">
+                                                                    <img src="/img/main3.webp" alt="">
+                                                                    <h1>Sexy short sleeveless low-cut nightgown design white</h1>
+                                                                    <p>210.000<sup>Đ</sup></p>
+                                                                </div>
+                                                                <div class="cartegory-right-content-item">
+                                                                    <img src="/img/main4.webp" alt="">
+                                                                    <h1>See-through lace nightgown with sexy deep slit neck</h1>
+                                                                    <p>210.000<sup>Đ</sup></p>
+                                                                </div>
+                                                                <div class="cartegory-right-content-item">
+                                                                    <img src="/img/main5.webp" alt="">
+                                                                    <h1>Sexy see-through nightdress with super short chest lace</h1>
+                                                                    <p>210.000<sup>Đ</sup></p>
+                                                                </div>
+                                                                <div class="cartegory-right-content-item">
+                                                                    <img src="/img/main6.webp" alt="">
+                                                                    <h1>ÁO SƠ MI NỮ KẺ SỌC TRẮNG DỄ THƯƠNG</h1>
+                                                                    <p>210.000<sup>Đ</sup></p>
+                                                                </div>
+                                                                <div class="cartegory-right-content-item">
+                                                                    <img src="/img/main7.webp" alt="">
+                                                                    <h1>2 lace nightgown with lace on both sides and criss-cross back</h1>
+                                                                    <p>210.000<sup>Đ</sup></p>
+                                                                </div>
+                                                                <div class="cartegory-right-content-item">
+                                                                    <img src="/img/main8.webp" alt="">
+                                                                    <h1>2 lace nightgown with lace on both sides and criss-cross white</h1>
+                                                                    <p>210.000<sup>Đ</sup></p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="cartegory-right-bottom row">             
+                                                            <div class="cartegory-right-bottom-items ">
+                                                                    <p> 2 <span>|</span>4 Product</p>
+                                                            </div>
+                                                            <div class="cartegory-right-bottom-items">
+                                                                    <p> <span>&#171;</span>1 2 3 4<span>&#187;</span>Last page</p>
+                                                            </div>
+                                                            </div> 
+
+
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+
+
+{# app #}
+<section class="app-container">
+    <p>Download the app TvStore</p>
+    <div class="app-google">
+        <img src="/img/appStore.png">
+        <img src="/img/google.png">
+    </div>
+    <p>Receive TvStore Newsletter</p>
+    <input type="Text" placeholder="Enter your email...">
+</section>
+{# footer #}
+<div class="footer-top" >
+    <li><a href="">Contact</a></li>
+    <li><a href="">Introduce</a></li>
+    <li><a href="">Recruitment</a></li>
+</div>
+<div class="footer-center">
+<p>Address: 41 Cach Mang Thang 8 Street, An Hoa, Ninh Kieu, Can Tho - 0546 465 9675 <br>
+Order online : <b> 0343 658 5837</b>
+</p>
+</div>
+<div class="footer-bottom">
+    @TvStore all right reserved
+</div>
+
+{# <script>
+    const header = document.querySelector("header")
+    window.addEventListener("scroll", function(){
+        x = window.pageYOffset
+        if(x>0){
+            header.classList.add("sticky")
+        }
+        else{
+            header.classList.remove("sticky")
+        }
+    })
+
+
+
+    const imgPosition = document.querySelectorAll('.aspect-ratio-169 img')
+    const imgContainer = document.querySelector('.aspect-ratio-169')
+    const dotItem = document.querySelectorAll('.dot')
+    let imgNuber = imgPosition.length
+    let index = 0
+
+    imgPosition.forEach(function(image,index){
+        image.style.left = index*100 + "%"
+        dotItem[index].addEventListener("click", function(){
+            slider(index) 
+        })
+    })
+    function imgSlide(){
+    index++;
+    console.log(index)
+    if (index>=imgNuber) {index=0}
+    slider(index)
+    }
+    function slider(index){
+       imgContainer.style.left = "-"+ index*100+ "%" 
+       const dotActive = document.querySelector('.active')
+       dotActive.classList.remove("active")
+       dotItem[index].classList.add("active")
+       
+    }
+    setInterval(imgSlide,5000)
+</script> #}
+
+<script>
+    const itemsliderbar = document.querySelectorAll(".cartegory-left-li") 
+    itemsliderbar.forEach(function(menu,index){
+        menu.addEventListener("click",function(){
+        menu.classList.toggle("block")
+        })
+    })
+</script>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% form_theme sp_form 'bootstrap_4_layout.html.twig' %}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello SanPhamController!{% endblock %}
+
+{% block body %}
+    <link rel="stylesheet" href="css/sanpham.css">
+  <div class= "container">
+        {{form_start(sp_form)}}
+        {{form_widget(sp_form)}}
+        <input type="submit" value="submit" class="btn btn-primary"/>
+        {{form_end(sp_form)}}
+{% endblock %}
