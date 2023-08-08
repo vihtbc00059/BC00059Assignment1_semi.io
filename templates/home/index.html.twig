@@ -81,7 +81,37 @@
         <div class="dot"></div>
     </div>
 </section>
+<div class="main">
+    <table width="100%" border="1" style="border-collapse:collapse">
+    <tbody>
+       {% for sp in data %}
+       {% if loop.index0 % 3 == 0 %}
+          <tr>
+      {% endif %}
+      <td width="33%">
+          {# <a href="{{ path('product_detail', {'id': row.product_id}) }}"> #}
+          <center>
+              <b>{{ sp.name }}</b><br/>
+              <img src="{{ asset('uploads/sanpham/' ~ sp.photo) }}" height="100px"><br/>
+              {{ sp.price|number_format(0) }} VND
+          </center>
+          <form>
+              <center>
+                <div class="cart_bt_1">
+                  <button type="submit" formmethod="post" formaction="{{path('app_cart_add',{'product_id':sp.getId()})}}">Add to cart</button>
+                </div>
+             </center>
+          </form>
 
+      {% if loop.index0 % 3 == 2 %}
+          </td></tr>
+      {% endif %}
+  {% endfor %}
+
+  {% if data|length % 3 != 0 %}
+      </tr>
+  {% endif %}
+</table>
 {# app #}
 <section class="app-container">
     <p>Download the app TvStore</p>
