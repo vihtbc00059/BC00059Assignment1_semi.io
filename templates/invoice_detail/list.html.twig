@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello Invoice!{% endblock %}
+
+{% block body %}
+
+<div class="container">
+
+    <table class="table" style="text-align: center"
+        <thead>
+            <tr >
+                <td> No </td>
+                <td> Invoice Detail Code  </td>
+                {# <td> O </td> #}
+                <td> Item Name </td>
+                <td> Quantity </td>
+                <td> Price </td>
+            </tr>
+         </thead>
+
+         <tbody>
+            {% for invd in data %}
+                <tr>
+                    <td>{{loop.index}}</td>
+                    <td>{{invd.getId()}}</td>
+                    {# <td>{{invd.getO().getId()}}</td> #}
+                    <td>{{invd.getItem().getName()}}</td>
+                    <td>{{invd.getQuantity()}}</td>
+                    <td>{{invd.getPrice()}}</td>
+                </tr>
+             {% endfor %}
+        </tbody>      
+    </table>
+</div>
+
+{% endblock %}

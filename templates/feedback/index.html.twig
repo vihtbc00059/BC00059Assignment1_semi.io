@@ -1,0 +1,15 @@
+{% form_theme feedback_form 'bootstrap_4_layout.html.twig'%}
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello Feedback!{% endblock %}
+
+{% block body %}
+
+<div class="container">
+    <h1 class="display-6 text-center">Add FeedBack</h1>
+    {{form_start(feedback_form)}}
+    {{form_widget(feedback_form)}}
+    <input type="submit" value="submit" class="btn btn-primary"/>
+    {{form_end(feedback_form)}}
+</div>
+{% endblock %}

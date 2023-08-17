@@ -259,7 +259,7 @@ header:hover {
 }
 .cartegory-right-top-item:first-child {
     flex: 2;
-    font-size: 16px;
+    font-size: 15px;
     font-family: var(--main-text-font);
     font-weight: bold;
 }
@@ -267,6 +267,10 @@ header:hover {
     flex: 1;
     padding: 0 12px;
 }
+main img {
+    margin-right: 20px;
+}
+
 /* .cartegory-right-top-item button{
     width: 100%;
     padding: 10px 30px;
@@ -276,7 +280,7 @@ header:hover {
     border: 2px solid #dddddd;
     cursor: pointer;
 } */
-.cartegory-right-top-item select{
+/* .cartegory-right-top-item select{
     width: 100%;
     padding: 10px 15px;
     display: flex;
@@ -284,13 +288,13 @@ header:hover {
     background-color: #fff;
     border: 2px solid #dddddd;
     cursor: pointer;
-}
+} */
 .cartegory-right-content{
     margin-top: 20px;
     justify-content: space-between;
 
 }
-.cartegory-right-content-item{
+.cartegory-right-content-item {
     width: calc(25% - 12px);
     text-align: center;
     padding: 12px 0;
@@ -303,10 +307,12 @@ header:hover {
 }
 .cartegory-right-content-item img{
     width: 100%;
+
 }
 .cartegory-right-content-item p {
     font-size: 12px;
 }
+
 .cartegory-right-bottom {
     justify-content: space-between;
     margin: 20px 0 20px;
@@ -512,7 +518,7 @@ header:hover {
 .activeB {
     display: none;
 }
-/* product-related */
+product-related */
 .product-relatte {
     margin-bottom: 50px;
 

@@ -1,0 +1,14 @@
+{% form_theme invoice_form 'bootstrap_5_layout.html.twig'%}
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello Feedback!{% endblock %}
+
+{% block body %}
+
+<div class="container">
+    {{form_start(invoice_form)}}
+    {{form_widget(invoice_form)}}
+    <input type="submit" value="submit" class="btn btn-primary"/>
+    {{form_end(invoice_form)}}
+</div>
+{% endblock %}     

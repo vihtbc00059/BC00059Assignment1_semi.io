@@ -1,0 +1,62 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello Invoice!{% endblock %}
+
+{% block body %}
+
+<div class="container">
+
+    <table class="table" style="text-align: center"
+        <thead>
+            <tr >
+                <td> No </td>
+                <td> Invoice Code  </td>
+                <td> Customer Name </td>
+                <td> Address </td>
+                <td> Phone Number </td>
+                <td> Total Price </td>
+                {# <td> Status </td> #}
+                <td> Act </td>
+            </tr>     
+         </thead>
+
+         <tbody>
+            {% for inv in data %}
+                <tr>
+                    <td>{{loop.index}}</td>
+                    <td>{{inv.getId()}}</td>
+                    <td>{{inv.getCustomerName()}}</td>
+                    <td>{{inv.getCustomerAddress()}}</td>
+                    <td>{{inv.getCustomerPhone()}}</td>
+                    <td>{{inv.getTotalPrice()}}</td>
+                    {# <td>{{inv.isStatus()}}
+                        {% if inv.isStatus() == 0 %}
+                            <p>Paid</p>
+                        {% elseif inv.isStatus() == 1 %}
+                            <p>Unpaid</p>
+                        {% endif %} #}
+                    </td>
+                        
+                    <td>
+                        <a href="{{path('app_ds_Invoicedetail',{'id':inv.getId()})}}" class="btn btn-warning"> Detail</a>
+                        {# <a href="javascript:deleteinv('{{path('app_delete_invoice',{'id':inv.getId()})}}')" class="btn btn-danger"> Delete</a>  #}
+                    </td>
+                </tr>
+             {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}
+
+{% block javascripts %}
+<script>
+    function deleteinv(url){
+        if(confirm("Do you delete invoice?")){
+            window.location.href = url;
+        }
+    }
+</script>
+{% endblock %}
+
+

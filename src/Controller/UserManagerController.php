@@ -53,12 +53,42 @@ class UserManagerController extends AbstractController
             'u_form' => $form->createView(),
         ]);
     }
-    #[Route('/san/pham/{id}/delete', name: 'app_delete_user')]
-    public function delete(EntityManagerInterface $em, int $id, Request $req ): Response
+   
+    #[Route('/user/manager//{id}/delete', name: 'app_delete_user_manager')]
+    public function delete(EntityManagerInterface $em, int $id, Request $req): Response
     {
-        $sp = $em-> find(SanPham::class, $id);
-        $em->remove($sp);
+        $u = $em->find(User::class, $id);
+        $em->remove($u);
         $em->flush();
-        return new RedirectResponse($this->urlGenerator->generate('app_user_manager'));
+        return new RedirectResponse($this->ug->generate('app_user_manager'));
     }
+
+    
+    
+
+
+    // #[Route('/user/manager{id}/edit', name: 'app_edit_san_pham')]
+    // public function edit(EntityManagerInterface $em, int $id, Request $req ): Response
+    // {
+    //     $u = $em-> find(User::class, $id);
+    //     $form = $this-> createForm(SanPhamType::class, $u);
+    //     $form->handleRequest($req);
+
+    //     if($form->isSubmitted() && $form->isValid()){
+    //         $data = $form->getData();
+    //         $file = $form->get("photo")->getData();
+    //         if ($file){
+    //             $fileName = $fileUploader->upload($file);
+    //             $data->setPhoto($fileName);
+
+    //         }
+
+    //         $sp->setName($data->getName())->setPrice($data->getPrice());
+    //         $em->flush();
+    //         return new RedirectResponse($this->urlGenerator->generate('app_user_manager'));}
+        
+    //      $this->render('user_manager/index.html.twig', [
+    //         "u_form"=>$form->createView()
+    //     ]);
+    // }
 }

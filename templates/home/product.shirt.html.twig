@@ -6,7 +6,6 @@
 
 <link rel="stylesheet" href="/css/sanpham.css">
 
-
     <header>
     <h2 class="Logo">TvStore</h2>
 
@@ -57,9 +56,7 @@
         <li><a href"">Abous Us</a></li>        
     </div>
     <div class="order">
-    <form action="{{ path('search_products') }}" method="GET">
         <li><input placeholder="Search" type="text"><i class="fa fa-search"></i></li>
-    </form>
         <li><a class="fa fa-user-search" href="{{ path('app_login') }}">Login</a></li>
         <li><a class="fa fa-shopping-cart" href="{{ path('app_cart') }}">Cart</a></li>
         <li><a class="fa fa-faw"></a></li>
@@ -70,7 +67,7 @@
 <section class="cartegory">
     <div class="container">
         <div class="cartegory-top row">
-            <p>Home</p> <span>&#10230;</span> <p>Female</p> <span>&#10230;</span> <p>New products</p>
+            <p>Home</p> <span>&#10230;</span> <p>Female</p> <span>&#10230;</span> <p>Shirt</p>
         </div>
     </div>
     <div class="container">
@@ -80,7 +77,7 @@
                     <li class="cartegory-left-li"><a href="#">Female</a>
                      <ul>
                         {# <li><a href="">Shirt</a></li> #}
-                        <li><a href="{{path('app_home_product_shrirt')}}">T-shirt</a></li>
+                        <li><a href="">T-shirt</a></li>
                         <li><a href="">Vest</a></li>
                         <li><a href="">Jacket</a></li>
                         <li><a href="">Sweater</a></li>      
@@ -107,57 +104,44 @@
                 </ul>
 
             </div>
-             <div class="cartegory-right ">
-                 <div class="cartegory-right-top-item ">
+             <div class="cartegory-right row">
+                    <div class="cartegory-right-top-item">
                         <p>New arrivals women's goods</p>
                     </div> 
-                 <div class="cartegory-right-top-item">
-                    <select name="" id="">
-                        <option value="">Arrange </option>
-                        <option value="">Price high to low</option>
-                        <option value="">Low to high price</option>
-                    </select>
-                </div> 
-                
-                <div class="cartegory-right-content">
-                 <div class="main">
-    <table width="100%" border="1" style="border-collapse:collapse">
-    <tbody>
-       {% for sp in data %}
-       {% if loop.index0 % 3 == 0 %}
-          <tr>
-      {% endif %}
-      <td width="44 %">
-          {# <a href="{{ path('productDetail.html.twig', {'id': row.product_id}) }}"> #}
-          <center>
-              <b>{{ sp.name }}</b><br/>
-              <img src="{{ asset('uploads/sanpham/' ~ sp.photo) }}" height="100px"><br/>
-              {{ sp.price|number_format(0) }} $
-          </center>
-          <form>
-              <center>
-                <div class="cart_bt_1">
-                <button type="submit" formmethod="post" formaction="{{path('app_cart_add',{'product_id':sp.getId()})}}">Add to cart</button>
-                <button type="submit" formmethod="post" formaction="{{path('app_home_product_detail',{'id':sp.id()})}}">Details</button>
-                   
-                {# <a href="{{ path('app_home_product_detail', {'id': sp.id}) }}" class="btn btn-danger">Details</a> #}
+                    <div class="cartegory-right-top-item ">
+                         <select name="" id="">
+                             <option value="">Arrange </option>
+                             <option value="">Price high to low</option>
+                             <option value="">Low to high price</option>
+                        </select>
+                    </div>
+                      <div class="cartegory-right-content row">
+                     <div class="cartegory-right-content-item ">
+                        <img src="/img/shirt1.webp" alt="">
+                     <h1><a href="">Women's T-shirt</a></h1>
+                     <p>120<sup>$</sup></p>
+                        </div>
+                        <div class="cartegory-right-content-item">
+                        <img src="/img/shirt2.webp" alt="">
+                     <h1><a href="">Women's T-shirt</a></h1>
+                     <p>120<sup>$</sup></p>
+                     </div>
+                        <div class="cartegory-right-content-item">
+                        <img src="/img/shirt3.webp" alt="">
+                     <h1><a href="">Women's T-shirt</a></h1>
+                     <p>120<sup>$</sup></p>
+                        </div>
+                          <div class="cartegory-right-content-item">
+                        <img src="/img/shirt3.webp" alt="">
+                     <h1><a href="">Women's T-shirt</a></h1>
+                     <p>120<sup>$</sup></p>
+                        </div>
+            </div>
                 </div>
-             </center>
-             
-          </form>
 
-      {% if loop.index0 % 3 == 2 %}
-          </td></tr>
-      {% endif %}
-  {% endfor %}
-
-  {% if data|length % 3 != 0 %}
-      </tr>
-  {% endif %}
-</table>  
-</div>
-</div>
-</div>
+                          
+        </div>
+    </div>
 </section>
 
 
@@ -174,8 +158,8 @@
 </section>
 {# footer #}
 <div class="footer-top" >
-    <li><a href="{{path('app_contact')}}">Contact</a></li>
-    <li><a href="{{path('app_home_intro')}}">Introduce</a></li>
+    <li><a href="">Contact</a></li>
+    <li><a href="">Introduce</a></li>
     <li><a href="">Recruitment</a></li>
 </div>
 <div class="footer-center">

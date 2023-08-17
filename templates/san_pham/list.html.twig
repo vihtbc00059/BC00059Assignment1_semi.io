@@ -4,9 +4,16 @@
 {% block title %}Hello SanPhamController!{% endblock %}
 
 {% block body %}
+          <a href="{{path('app_user_manager')}}" class ="btn btn-primary"> List Manager </a>
+           <a href="{{path('app_ds_feedback')}}" class ="btn btn-success"> Feedback </a>
+          <a href="{{path('app_ds_Invoice')}}" class ="btn btn-success"> Invoice </a>
+
   <div class= "container">
           <a href="{{path('app_san_pham')}}" class ="btn btn-success"> ADD </a>
           <a href="{{path('app_logout')}}" class ="btn btn-danger"> Logout </a>
+         
+          
+          
 
         <table class="table">
         <thead> 
@@ -35,9 +42,9 @@
           <td>
           <a href="{{path('app_edit_san_pham',{'id' :sp.getId()})}}" class ="btn btn-danger"> Edit </a>
           <a href="javascript:deletesp('{{path('app_delete_san_pham',{'id' :sp.getId()})}}')" class ="btn btn-warning">Delete </a>
-          <form>
+          {# <form>
             <button type="submit" formmethod="post" formaction="{{path('app_cart_add',{'product_id':sp.getId()})}}">Add to cart</button>
-          </form>
+          </form> #}
           </td>
           </tr>
         {% endfor %}

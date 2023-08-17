@@ -21,10 +21,10 @@ class SanPhamType extends AbstractType
             ->add('Name', TextType:: class)
             ->add('price', NumberType:: class)
             ->add('Conlusion', TextType:: class)
-            ->add('Photo', FileType:: class,
+            ->add('photo', FileType:: class,
             
                     array(
-                            'label' => 'Photo (png, jpeg)',
+                            'label' => 'photo (png, jpeg)',
                             'data_class'=> null,
                             'required' => false
                     ),

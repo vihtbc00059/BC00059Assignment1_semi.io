@@ -22,24 +22,48 @@ class HomeController extends AbstractController
     #[Route('/home', name: 'app_home')]
     public function list_sp(EntityManagerInterface $em): Response
     {
-        $query = $em->createQuery('SELECT sp FROM App\Entity\SanPham sp');  
-        $lSp = $query->getResult();  
         return $this->render('home/index.html.twig',[
-            "data"=>$lSp
         ]);
     }
     #[Route('/home/product', name: 'app_home_product')]
-    public function product(): Response
+    public function product(EntityManagerInterface $em): Response
     {
+        $query = $em->createQuery('SELECT sp FROM App\Entity\SanPham sp');  
+        $lSp = $query->getResult();  
         return $this->render('home/product.html.twig', [
-            'controller_name' => 'HomeController',
+            "data"=>$lSp
         ]);
     }
-    #[Route('/home/product/detail', name: 'app_home_product_detail')]
-    public function detail(): Response
+   
+    #[Route('/home/product/details/{id}', name: 'app_home_product_detail')]
+        public function show(EntityManagerInterface $em, int $id): Response
+        {
+            $sp = $em->find(Sanpham::class, $id);
+
+            return $this->render('home/productDetail.html.twig', [
+                "data" => $sp
+            ]);
+        }
+
+        #[Route('/home/product/shirt', name: 'app_home_product_shrirt')]
+        public function shirt(EntityManagerInterface $em): Response
+        {
+            return $this->render('home/product.shirt.html.twig',[
+            ]);
+        }
+        #[Route('/search', name: 'search_products')]
+    public function search(Request $request): Response
     {
-        return $this->render('home/productDetail.html.twig', [
-            'controller_name' => 'HomeController',
+        $keyword = $request->query->get('keyword');
+
+        $products = $this->entityManager->getRepository(SanPham::class)->findByKeyword($keyword);
+
+        return $this->render('home/product.html.twig', ['data' => $products]);
+    }
+    #[Route('/home/intro', name: 'app_home_intro')]
+    public function intro(EntityManagerInterface $em): Response
+    {
+        return $this->render('home/intro.html.twig',[
         ]);
     }
 }
